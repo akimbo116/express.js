@@ -1,0 +1,136 @@
+/* Reset dan setup dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #d6d4ff, #fbeaff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: slideDown 1s ease;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #4b00e0;
+}
+
+.subtitle {
+  color: #777;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Form */
+.todo-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #dcdcdc;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #6a5acd;
+  box-shadow: 0 0 0 4px rgba(106, 90, 205, 0.2);
+}
+
+.add-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #6a5acd;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #4b00e0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(75, 0, 224, 0.3);
+}
+
+/* List */
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.delete-btn,
+.check-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: color 0.3s;
+}
+
+.delete-btn:hover {
+  color: #ff4d4d;
+}
+
+.check-btn:hover {
+  color: #4CAF50;
+}
+
